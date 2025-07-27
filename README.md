@@ -30,6 +30,8 @@ The hashRecord is a signed hash from all records, such as A records. The hashRec
 
 The hash is calculated from the blockheaders.
 
+For more information on blocks read [blocks.md](/blocks.md)
+
 A problem with such an approach is that a certain computer in a network could modify their database and just remove or change the entry of a block and it's public key. To prevent this we implement a reputation system.
 
 ### Reputation
