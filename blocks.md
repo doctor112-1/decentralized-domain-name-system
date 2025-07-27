@@ -1,0 +1,31 @@
+# Blocks
+
+Blocks are the building base of our database. Outlined below is their structure
+
+### Structure
+
+The structure was briefly covered in the [README.md](/README.md)
+
+As stated, block headers should consist of a timestamp, a hashRecord, a nonce, a target, and a domain name.
+
+#### Block structure
+
+| Field | Description |
+| -------------- | --------------- |
+| blocksize | number of bytes following up to the end of the block |
+| blockheader | blockheaders |
+| hash | signed hash of blockheaders |
+| hashRecord | signed hash of all records, does not go through Proof-of-Work |
+| public key | key used to verify signed hash |
+
+There are additional fields for records, such as A records, but these are optional. If no record is provided, an A record field is created with the value of 1.
+
+#### Blockheaders
+
+| Field   | Description    |
+|--------------- | --------------- |
+| timestamp   | Unix timestamp since 1970-01-01T00:00 UTC   |
+| hashRecord   | signed hash of all records, does not go through Proof-of-Work   |
+| nonce   | nonce from Proof-of-Work   |
+| target   | target from Proof-of-Work   |
+| domain name | name of the domain like `example.org` |
