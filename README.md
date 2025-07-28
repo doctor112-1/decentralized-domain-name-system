@@ -24,7 +24,7 @@ The decentralized DNS will not operate on a blockchain. The reason that a blockc
 
 Blocks are not linked together with the previous hash. Instead they stand alone in the blockchain. To prevent from anyone to updating a block we store each block with a public key that corresponds to the person who mined the block and the block has a hash that is signed with a private key. Whenever someone wants to update a record in the block, the records is hashed then signed with the private key that the person who mined it has. Then, that change is sent to each computer in the network. Each computer verifies it is official with the public key stored in the database and updates if it is official.
 
-Each block should have block headers that consist of a timestamp, the hashRecord, a nonce, a target, and a domain name.
+Each block should have block headers that consist of a timestamp, a nonce, a target, and a domain name.
 
 The hashRecord is a signed hash from all records, such as A records. The hashRecord does not go through Proof-of-Work.
 

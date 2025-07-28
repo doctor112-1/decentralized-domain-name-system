@@ -2,13 +2,13 @@
 
 Blocks are the building base of our database. Outlined below is their structure
 
-### Structure
+## Structure
 
 The structure was briefly covered in the [README.md](/README.md)
 
-As stated, block headers should consist of a timestamp, a hashRecord, a nonce, a target, and a domain name.
+As stated, block headers should consist of a timestamp, a nonce, a target, and a domain name.
 
-#### Block structure
+### Block structure
 
 | Field | Description |
 | -------------- | --------------- |
@@ -19,12 +19,15 @@ As stated, block headers should consist of a timestamp, a hashRecord, a nonce, a
 
 There are additional fields for records, such as A records, but these are optional. If no record is provided, an A record field is created with the value of 1.
 
-#### Blockheaders
+### Blockheaders
 
 | Field   | Description    |
 |--------------- | --------------- |
 | timestamp   | Unix timestamp since 1970-01-01T00:00 UTC   |
-| hashRecord   | signed hash of all records, does not go through Proof-of-Work   |
 | nonce   | nonce from Proof-of-Work   |
 | target   | target from Proof-of-Work   |
 | domain name | name of the domain like `example.org` |
+
+## Database
+
+Blocks are stored in an lmdb database with their key being the hash (signed hash of blockheaders not hashRecord).
