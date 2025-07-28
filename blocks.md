@@ -12,7 +12,6 @@ As stated, block headers should consist of a timestamp, a hashRecord, a nonce, a
 
 | Field | Description |
 | -------------- | --------------- |
-| blocksize | number of bytes following up to the end of the block |
 | blockheader | blockheaders |
 | hash | signed hash of blockheaders |
 | hashRecord | signed hash of all records, does not go through Proof-of-Work |
