@@ -12,10 +12,10 @@ As stated, block headers should consist of a timestamp, a nonce, a target, and a
 
 | Field | Description |
 | -------------- | --------------- |
-| blockheader | blockheaders |
-| hash | signed hash of blockheaders |
-| hashRecord | signed hash of all records, does not go through Proof-of-Work |
-| public key | key used to verify signed hash |
+| Blockheader | blockheaders |
+| Hash | signed hash of blockheaders |
+| HashRecord | signed hash of all records, does not go through Proof-of-Work |
+| PublicKey | key used to verify signed hash |
 
 There are additional fields for records, such as A records, but these are optional. If no record is provided, an A record field is created with the value of 1.
 
@@ -23,10 +23,10 @@ There are additional fields for records, such as A records, but these are option
 
 | Field   | Description    |
 |--------------- | --------------- |
-| timestamp   | Unix timestamp since 1970-01-01T00:00 UTC   |
-| nonce   | nonce from Proof-of-Work   |
-| target   | target from Proof-of-Work   |
-| domain name | name of the domain like `example.org` |
+| Timestamp   | Unix timestamp since 1970-01-01T00:00 UTC   |
+| Nonce   | nonce from Proof-of-Work   |
+| Target   | target from Proof-of-Work   |
+| DomainName | name of the domain like `example.org` |
 
 ## Database
 
