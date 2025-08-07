@@ -105,7 +105,7 @@ When a node first joins or wants to expand it's group it will ask for new nodes.
 
 | Field Name | Field Type | Notes |
 | --------------- | --------------- | --------------- |
-| sendNodes | char[] | list of nodes and their ip addresses seperated by a comma (ex: ipaddress,ipaddress,ipaddress) |
+| sendNodes | char[] | list of nodes and their ip addresses seperated by a comma (ex: ipaddress,ipaddress,ipaddress), if there are no nodes respond with a 0 (still in char[]) |
 
 ### `sendIP`
 
