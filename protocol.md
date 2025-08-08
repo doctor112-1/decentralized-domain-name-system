@@ -1,6 +1,6 @@
 # Protocol
 
-This protocol uses TCP to send messages. !!!!Ports from 7000 to 7500 should be open.!!!! Each message must include a `version`. If the versions mismatch, they must drop each other.
+This protocol uses TCP to send messages. Each message must include a `version`. If the versions mismatch, they must drop each other.
 
 ## Messages
 
@@ -26,7 +26,7 @@ This is the handshake a node sends other nodes when it joins the network, or wan
 
 ### `connectNodeResponse`
 
-This is the response nodes send to the node after the `connectNode` message. If the blocksAmount is 0, this is a new node and it should start sending all blocks back, else the other node will most likely send `getAllHashes`.
+This is the response nodes send to the node after the `connectNode` message.
 
 #### Format
 
